@@ -1,0 +1,20 @@
+[
+  {
+    "title" : "A New Way to Build Tiny Neural Networks Could Create Powerful AI on Your Phone",
+    "description": "We’ve been wasting our processing power to train neural networks that are ten times too big",
+    "date" : "May 12, 2019",
+    "image": "https://react.semantic-ui.com/images/wireframe/image.png"
+  },
+  {
+    "title" : "Deep Learning Could Reveal Why the World Works the Way It Does",
+    "description": "At a major AI research conference, one researcher laid out how existing AI techniques might be used to analyze causal relationships in data",
+    "date" : "May 10, 2019",
+    "image": "https://react.semantic-ui.com/images/wireframe/image.png"
+  },
+  {
+    "title" : "A New Way to Build Tiny Neural Networks Could Create Powerful AI on Your Phone",
+    "description": "We’ve been wasting our processing power to train neural networks that are ten times too big",
+    "date" : "May 12, 2019",
+    "image": "https://react.semantic-ui.com/images/wireframe/image.png"
+  }
+]
