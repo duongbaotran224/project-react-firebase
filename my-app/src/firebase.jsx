@@ -14,12 +14,12 @@ var firebaseConfig = {
   // Initialize Firebase
 export const firebaseConnect = firebase.initializeApp(firebaseConfig);
 
-var data = firebase.database().ref('blogs_list/blog1');
+// var data = firebase.database().ref('blogs_list/blog1');
 // data.once('value') .then(function(snapshot) {
 //   console.log('a', snapshot)
 // });
-data.set({
-  id: 4,
-  title: 'Title 1',
-  description: 'ahihi..'
-})
+// data.set({
+//   id: 4,
+//   title: 'Title 1',
+//   description: 'ahihi..'
+// })

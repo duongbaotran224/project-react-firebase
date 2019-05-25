@@ -1,0 +1,5 @@
+export const ADD_BLOG = 'ADD_BLOG'
+export const DELETE_BLOG = 'DELETE_BLOG'
+export const UPDATE_BLOG = 'UPDATE_BLOG'
+export const UPLOAD_IMAGE= 'UPLOAD_IMAGE'
+export const LOAD_IMAGE= 'LOAD_IMAGE'

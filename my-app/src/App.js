@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
-import {firebaseConnect} from './firebase'
 
 import Menu from './components/menu'
 import Home from './components/home'
@@ -8,8 +7,7 @@ import About from './components/about'
 import Blogs from './components/blogs'
 import CreateBlog from './components/create_blog'
 
-function App() {
-  console.log(firebaseConnect)
+function App(props) {
   return (
     <div className="App">
     <Menu/>
