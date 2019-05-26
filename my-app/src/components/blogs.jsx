@@ -18,7 +18,7 @@ class Blogs extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     /// load arraydata from firebase
     var dataRef = firebaseConnect.database().ref('blogs_list/');
     dataRef.on('value', (snapshot) => {

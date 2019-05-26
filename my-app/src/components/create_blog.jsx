@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
+import {makeID} from '../functions/makeID'
 var moment = require('moment');
 
-function makeID() {
-  var text_id = '';
-  var character = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  for (let i = 0; i < 20; i++){
-    text_id += character.charAt((Math.floor(Math.random() * character.length)))
-  }
-  return text_id
-}
+
 
 const styles = {
   margin: '3em',
@@ -90,7 +84,6 @@ class FormCreateBlog extends Component {
       value={this.state.description}
       onChange={this.handleChange}
       />
-      <Form.TextArea label='Content' placeholder='Content...' value=''/>
       <Form.Input label="Upload image" type="file" onChange={this.fileChangedHandler}/>
       <Button type='submit' onClick={this.addBlog}>Submit</Button>
       </Form>
@@ -99,9 +92,6 @@ class FormCreateBlog extends Component {
   }
 }
 
-// const mapStateToProps= state => ({
-// test: state.blogs.test
-// });
 
 const mapDispatchToProps = (dispatch) => ({
   addBlog: (blog_added) => dispatch({type: 'ADD_BLOG', blog_added}),

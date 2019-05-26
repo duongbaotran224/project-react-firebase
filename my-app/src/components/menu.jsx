@@ -7,22 +7,22 @@ import { NavLink } from 'react-router-dom'
 export default class MenuApp extends Component {
 
   list_items = [
-    {
-      text: 'home',
-      url: '/'
-    },
-    {
-      text: 'about',
-      url: '/about'
-    },
+    // {
+    //   text: 'home',
+    //   url: '/'
+    // },
+    // {
+    //   text: 'about',
+    //   url: '/about'
+    // },
     {
       text: 'blogs',
       url: '/blogs'
     },
-    {
-      text: 'contact',
-      url: '/contact'
-    },
+    // {
+    //   text: 'contact',
+    //   url: '/contact'
+    // },
     {
       text: 'add blog',
       url: '/create_blog'

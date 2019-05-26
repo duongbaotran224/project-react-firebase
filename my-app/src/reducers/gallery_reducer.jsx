@@ -16,15 +16,16 @@ function GalleryReducer(state = [], action) {
       var metadata = {
         contentType: action.file.type
       };
-      storageRef.child(`gallery/${action.blogID}/` + action.imgID)
+      return storageRef.child(`gallery/${action.blogID}/` + action.imgID)
                 .put(file, metadata)
                 .then(
                   console.log
                 );
       break;
     case LOAD_IMAGE:
-      
 
+
+      break;
     default:
       return state;
   }

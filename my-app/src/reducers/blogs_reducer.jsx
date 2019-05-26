@@ -14,8 +14,7 @@ function BlogsReducer(state = [], action) {
       //   action.blog_added
       // ]
       const data  = firebaseConnect.database().ref('blogs_list')
-      data.push(action.blog_added)       // add firebase
-      break;
+      return data.push(action.blog_added)       // add firebase
     default:
       return state;
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Item } from 'semantic-ui-react'
+import { Item } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 import * as firebase from 'firebase'
 
 var storageRef = firebase.storage().ref();
@@ -37,15 +38,15 @@ class BlogItem extends Component {
 
   render() {
     return (
-      <Item key={this.state.id}>
-      <Item.Image size='small' src={this.state.image_url} />
-      <Item.Content>
-      <Item.Header>{this.state.title}</Item.Header>
-      <Item.Description>{this.state.description}</Item.Description>
-      <Item.Meta>
-      <span className='date'>{this.state.date}</span>
-      </Item.Meta>
-      </Item.Content>
+      <Item as={Link} to={`post/${this.state.id}`} key={this.state.id}>
+        <Item.Image size='small' src={this.state.image_url} />
+        <Item.Content>
+        <Item.Header>{this.state.title}</Item.Header>
+        <Item.Description>{this.state.description}</Item.Description>
+        <Item.Meta>
+          <span className='date'>{this.state.date}</span>
+        </Item.Meta>
+        </Item.Content>
       </Item>
     );
   }
