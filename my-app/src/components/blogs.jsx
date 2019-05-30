@@ -1,5 +1,5 @@
 import React from 'react'
-import { Item } from 'semantic-ui-react'
+import { Item,  Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
 // import data from '../data.json'
 import {firebaseConnect} from '../firebase'
 import BlogItem from './blog_item'
@@ -14,6 +14,7 @@ class Blogs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: true,
       dataFirebase: []
     };
   }
@@ -26,21 +27,36 @@ class Blogs extends React.Component {
       var dataArray = Object.keys(dataObj).map(i => dataObj[i])
       if(dataArray) {
         this.setState({
-          dataFirebase: dataArray
+          dataFirebase: dataArray,
+          loading: false
         })
       }
     });
   }
 
+  componentWillUnmount() {
+    this.setState({
+      loading: true,
+      dataFirebase: null
+    })
+  }
+
 
   render() {
-  const {dataFirebase} = this.state
+  const {dataFirebase, loading} = this.state
     return (
-      <Item.Group divided style={styles}>
+      <div style={styles}>
+
+
+      {loading && <Dimmer active inverted>
+        <Loader content='Loading' />
+      </Dimmer>}
+      <Item.Group divided>
         {dataFirebase.map((item, index) => (
           <BlogItem key={item.id} {...item}/>
         ))}
       </Item.Group>
+      </div>
     )
   }
 }
