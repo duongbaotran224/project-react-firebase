@@ -42,7 +42,7 @@ class BlogItem extends Component {
     const {loading} = this.state
     return (
       <Item as={Link} to={`post/${this.state.id}`} key={this.state.id}>
-      {loading ? <Placeholder style={{ height: 100, width: 150, marginRight: '1em'}}>
+      {loading ? <Placeholder style={{ height: 100, width: 120, marginRight: '1em'}}>
     <Placeholder.Image />
   </Placeholder> : <Item.Image size='small' src={this.state.image_url} />}
 
